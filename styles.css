@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    font-family: 'Jura', sans-serif;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 50%, rgba(160, 0, 0, 1) 100%);
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 7630px;
+    background: url(images/NewWholeWebsiteBackground.png);
+    position: relative;
+}
+
+.img {}
+
+.StarOne {
+    position: absolute;
+    top: 11.5%;
+    left: 500px;
+    transform: scale(1, 1);
+    animation: StarOneScale 5s linear infinite;
+}
+
+@Keyframes StarOneScale {
+    0% {
+        transform: scale(0.3, 0.3);
+    }
+
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        transform: scale(0.3, 0.3);
+    }
+}
+
+.StarTwo {
+    position: absolute;
+    top: 31.5%;
+    left: 200px;
+    transform: scale(1, 1);
+    animation: StarTwoScale 5s linear infinite;
+}
+
+@Keyframes StarTwoScale {
+    0% {
+        transform: scale(0.4, 0.4);
+    }
+
+    50% {
+        transform: scale(0.6, 0.6);
+    }
+
+    100% {
+        transform: scale(0.4, 0.4);
+    }
+}
+
+.StarReflectionOne {
+    position: absolute;
+    top: 55%;
+    left: 400px;
+    transform: scale(0.5, 0.5);
+    animation: StarReflectionOneScale 5s linear infinite;
+}
+
+@Keyframes StarReflectionOneScale {
+    0% {
+        transform: scale(0.3, 0.3);
+    }
+
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        transform: scale(0.3, 0.3);
+    }
+}
+
+.StarReflectionTwo {
+    position: absolute;
+    top: 52%;
+    left: 800px;
+    transform: scale(1.5, 1.5);
+    animation: StarReflectionTwoScale 5s linear infinite;
+}
+
+@Keyframes StarReflectionTwoScale {
+    0% {
+        transform: scale(0.6, 0.6);
+    }
+
+    50% {
+        transform: scale(0.8, 0.8);
+    }
+
+    100% {
+        transform: scale(0.6, 0.6);
+    }
+}
+
+.StarThree {
+    position: absolute;
+    top: 73%;
+    left: 500px;
+    transform: scale(1, 1);
+    animation: StarThreeScale 5s linear infinite;
+}
+
+@Keyframes StarThreeScale {
+    0% {
+        transform: scale(0.8, 0.8);
+    }
+
+    50% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(0.8, 0.8);
+    }
+}
+
+.StarFour {
+    position: absolute;
+    top: 95%;
+    left: 500px;
+    transform: scale(1, 1);
+    animation: StarFourScale 5s linear infinite;
+}
+
+@Keyframes StarFourScale {
+    0% {
+        transform: scale(2, 2);
+    }
+
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+
+    100% {
+        transform: scale(2, 2);
+    }
+}
+
+.TextLines {
+    grid-column: 1 / 13;
+    font-weight: 900;
+}
+
+.TextLines div {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.TextLine1 {
+    top: 3%;
+    left: 0px;
+    font-size: 50px;
+    background: linear-gradient(to bottom, #ffffff 50%, #cccccc 60%);
+}
+
+.TextLine2 {
+    top: 5%;
+    left: 0px;
+    font-size: 45px;
+    background: linear-gradient(to bottom, #ffffff 50%, #cccccc 60%);
+}
+
+.TextLine3 {
+    top: 10%;
+    left: 0px;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #ffffff 50%, #747474 60%);
+}
+
+.TextLine4 {
+    top: 11.5%;
+    left: 0px;
+    font-size: 30px;
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 37%, #747474 41%, #747474 53%, #ffffff 59%, #ffffff 100%);
+}
+
+.TextLine5 {
+    top: 19%;
+    left: 0px;
+    font-size: 50px;
+    background: linear-gradient(to top, #656565 30%, #ffffff 60%);
+}
+
+.TextLine6 {
+    top: 21%;
+    left: 0px;
+    font-size: 40px;
+    background: linear-gradient(to right, #6a6a6a 45%, #ffffff 60%);
+}
+
+.TextLine7 {
+    top: 31%;
+    left: -37%;
+    font-size: 20px;
+    background: linear-gradient(to right, #646464 40%, #ffffff 60%);
+}
+
+.TextLine8 {
+    top: 31.7%;
+    left: -35%;
+    font-size: 20px;
+    background: linear-gradient(to right, #525252 40%, #ffffff 60%);
+}
+
+.TextLine9 {
+    top: 33.5%;
+    left: -15%;
+    font-size: 20px;
+    background: linear-gradient(to left, #7b7a7a 40%, #ffffff 60%);
+}
+
+.TextLine10 {
+    top: 34.2%;
+    left: -12%;
+    font-size: 20px;
+    background: linear-gradient(to left, #818181 40%, #ffffff 60%);
+}
+
+.TextLine11 {
+    top: 41%;
+    left: 0%;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #ffffff 40%, #8e8e8e 60%);
+}
+
+.TextLine12 {
+    top: 44%;
+    left: 0%;
+    font-size: 40px;
+    background: linear-gradient(to right, #ffffff 40%, #ff8484 50%, #ff8484 50%, #ffffff 60%);
+}
+
+.TextLine13 {
+    top: 49%;
+    left: -10%;
+    font-size: 30px;
+    background: linear-gradient(to bottom, #ffffff 50%, #969595 70%);
+}
+
+.TextLine14 {
+    top: 49.7%;
+    left: -10%;
+    font-size: 25px;
+    background: linear-gradient(to bottom, #ffffff 50%, #969595 70%);
+}
+
+.TextLine15 {
+    top: 52%;
+    left: -4%;
+    font-size: 22px;
+    background: linear-gradient(to right, #ffffff 50%, #ff6f6f 70%);
+}
+
+.TextLine16 {
+    top: 55%;
+    left: -29%;
+    font-size: 22px;
+    background: linear-gradient(to right, #ffffff 50%, #ff6f6f 70%);
+}
+
+.TextLine17 {
+    top: 61%;
+    left: 0%;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #ffffff 50%, #ff9e9e 70%);
+}
+
+.TextLine18 {
+    top: 64%;
+    left: 0%;
+    font-size: 40px;
+    background: linear-gradient(to right, #ff8484 30%, #ff1e1e 50%, #ff1e1e 50%, #ff8484 70%);
+}
+
+.TextLine19 {
+    top: 70%;
+    left: 0%;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #ffffff 50%, #ff9e9e 70%);
+}
+
+.TextLine20 {
+    top: 72%;
+    left: 0%;
+    font-size: 25px;
+    background: linear-gradient(to bottom, #ffffff 50%, #ff9e9e 70%);
+}
+
+.TextLine21 {
+    top: 76.5%;
+    left: 0%;
+    font-size: 25px;
+    background: linear-gradient(to bottom, #ff9e9e 50%, #ffffff 70%);
+}
+
+.TextLine22 {
+    top: 78%;
+    left: 0%;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #ff9e9e 50%, #ff4848 70%);
+}
+
+.TextLine23 {
+    top: 85%;
+    left: 0%;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #ffc9c9 50%, #ff9e9e 70%);
+}
+
+.TextLine24 {
+    top: 89%;
+    left: 0%;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #ff9191 50%, #ff0000 80%);
+}
+
+.TextLine25 {
+    top: 93%;
+    left: 0%;
+    font-size: 40px;
+    background: red;
+}
