@@ -1,622 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap" rel="stylesheet">
-    <!-- Potential fonts: Pontano Sans, Jura -->
-
-    <!-- For text gradient: https://www.cssportal.com/css-text-gradient-generator/ -->
-
-    <style>
-        body {
-            /* remove any gaps around the page */
-            margin: 0;
-            font-family: 'Jura', sans-serif;
-            background: rgb(0, 0, 0);
-            background: linear-gradient(180deg, rgba(0, 0, 0, 1) 50%, rgba(160, 0, 0, 1) 100%);
-        }
-
-        .container {
-            /* this centers the whole container */
-            margin: 0 auto;
-            width: 1200px;
-            display: grid;
-            /* let's use 12-column layout */
-            grid-template-columns: repeat(12, 1fr);
-
-            /* you need to change these values to whatever heights you'll be using */
-            grid-template-rows: 7630px;
-
-            background: url(images/NewWholeWebsiteBackground.png);
-            position: relative;
-        }
-
-        .img {}
-
-        .StarOne {
-            position: absolute;
-            top: 11.5%;
-            left: 500px;
-            transform: scale(1, 1);
-            animation: StarOneScale 5s linear infinite;
-        }
-
-        @Keyframes StarOneScale {
-            0% {
-                transform: scale(0.3, 0.3);
-            }
-
-            50% {
-                transform: scale(0.5, 0.5);
-            }
-
-            100% {
-                transform: scale(0.3, 0.3);
-            }
-        }
-
-        .StarTwo {
-            position: absolute;
-            top: 31.5%;
-            left: 200px;
-            transform: scale(1, 1);
-            animation: StarTwoScale 5s linear infinite;
-        }
-
-        @Keyframes StarTwoScale {
-            0% {
-                transform: scale(0.4, 0.4);
-            }
-
-            50% {
-                transform: scale(0.6, 0.6);
-            }
-
-            100% {
-                transform: scale(0.4, 0.4);
-            }
-        }
-
-        .StarReflectionOne {
-            position: absolute;
-            top: 55%;
-            left: 400px;
-            transform: scale(0.5, 0.5);
-            animation: StarReflectionOneScale 5s linear infinite;
-        }
-
-        @Keyframes StarReflectionOneScale {
-            0% {
-                transform: scale(0.3, 0.3);
-            }
-
-            50% {
-                transform: scale(0.5, 0.5);
-            }
-
-            100% {
-                transform: scale(0.3, 0.3);
-            }
-        }
-
-        .StarReflectionTwo {
-            position: absolute;
-            top: 52%;
-            left: 800px;
-            transform: scale(1.5, 1.5);
-            animation: StarReflectionTwoScale 5s linear infinite;
-        }
-
-        @Keyframes StarReflectionTwoScale {
-            0% {
-                transform: scale(0.6, 0.6);
-            }
-
-            50% {
-                transform: scale(0.8, 0.8);
-            }
-
-            100% {
-                transform: scale(0.6, 0.6);
-            }
-        }
-
-        .StarThree {
-            position: absolute;
-            top: 73%;
-            left: 500px;
-            transform: scale(1, 1);
-            animation: StarThreeScale 5s linear infinite;
-        }
-
-        @Keyframes StarThreeScale {
-            0% {
-                transform: scale(0.8, 0.8);
-            }
-
-            50% {
-                transform: scale(1, 1);
-            }
-
-            100% {
-                transform: scale(0.8, 0.8);
-            }
-        }
-
-        .StarFour {
-            position: absolute;
-            top: 95%;
-            left: 500px;
-            transform: scale(1, 1);
-            animation: StarFourScale 5s linear infinite;
-        }
-
-        @Keyframes StarFourScale {
-            0% {
-                transform: scale(2, 2);
-            }
-
-            50% {
-                transform: scale(1.5, 1.5);
-            }
-
-            100% {
-                transform: scale(2, 2);
-            }
-        }
-
-        .TextLines {
-            grid-column: 1 / 13;
-            font-weight: 900;
-        }
-
-
-        .TextLine1 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 3%;
-            left: 0px;
-            font-size: 50px;
-            text-align: center;
-            color: white;
-
-            background: #fc0000;
-            background: linear-gradient(to bottom, #ffffff 50%, #cccccc 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine2 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 5%;
-            left: 0px;
-            font-size: 45px;
-            text-align: center;
-            color: white;
-
-            background: #fc0000;
-            background: linear-gradient(to bottom, #ffffff 50%, #cccccc 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine3 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 10%;
-            left: 0px;
-            font-size: 40px;
-            text-align: center;
-            color: white;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ffffff 50%, #747474 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine4 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 11.5%;
-            left: 0px;
-            font-size: 30px;
-            text-align: center;
-            color: white;
-
-            background: #000000;
-            background: linear-gradient(to right, #ffffff 0%, #ffffff 37%, #747474 41%, #747474 53%, #ffffff 59%, #ffffff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine5 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 19%;
-            left: 0px;
-            font-size: 50px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to top, #656565 30%, #ffffff 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine6 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 21%;
-            left: 0px;
-            font-size: 40px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to right, #6a6a6a 45%, #ffffff 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine7 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 31%;
-            left: -37%;
-            font-size: 20px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to right, #646464 40%, #ffffff 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine8 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 31.7%;
-            left: -35%;
-            font-size: 20px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to right, #525252 40%, #ffffff 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine9 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 33.5%;
-            left: -15%;
-            font-size: 20px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to left, #7b7a7a 40%, #ffffff 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine10 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 34.2%;
-            left: -12%;
-            font-size: 20px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to left, #818181 40%, #ffffff 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine11 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 41%;
-            left: 0%;
-            font-size: 40px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ffffff 40%, #8e8e8e 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine12 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 44%;
-            left: 0%;
-            font-size: 40px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to right, #ffffff 40%, #ff8484 50%, #ff8484 50%, #ffffff 60%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine13 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 49%;
-            left: -10%;
-            font-size: 30px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ffffff 50%, #969595 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine14 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 49.7%;
-            left: -10%;
-            font-size: 25px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ffffff 50%, #969595 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine15 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 52%;
-            left: -4%;
-            font-size: 22px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to right, #ffffff 50%, #ff6f6f 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine16 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 55%;
-            left: -29%;
-            font-size: 22px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to right, #ffffff 50%, #ff6f6f 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine17 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 61%;
-            left: 0%;
-            font-size: 40px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ffffff 50%, #ff9e9e 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine18 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 64%;
-            left: 0%;
-            font-size: 40px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to right, #ff8484 30%, #ff1e1e 50%, #ff1e1e 50%, #ff8484 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine19 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 70%;
-            left: 0%;
-            font-size: 40px;
-            text-align: center;
-            color: white;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ffffff 50%, #ff9e9e 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine20 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 72%;
-            left: 0%;
-            font-size: 25px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ffffff 50%, #ff9e9e 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine21 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 76.5%;
-            left: 0%;
-            font-size: 25px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ff9e9e 50%, #ffffff 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine22 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 78%;
-            left: 0%;
-            font-size: 40px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ff9e9e 50%, #ff4848 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine23 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 85%;
-            left: 0%;
-            font-size: 40px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ffc9c9 50%, #ff9e9e 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine24 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 89%;
-            left: 0%;
-            font-size: 40px;
-            text-align: center;
-
-            background: #000000;
-            background: linear-gradient(to bottom, #ff9191 50%, #ff0000 80%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .TextLine25 {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            top: 93%;
-            left: 0%;
-            font-size: 40px;
-            text-align: center;
-            color: red;
-        }
-
-    </style>
-</head>
-
-<body>
-
-    <!-- DO NOT REMOVE THE DIV CONTAINER -->
-    <!-- add your content inside the container -->
-    <div class="container">
-
-        <div class="StarOne">
-            <img src="images/Star.png" alt="">
-        </div>
-
-        <div class="StarTwo">
-            <img src="images/Star.png" alt="">
-        </div>
-
-        <div class="StarThree">
-            <img src="images/Star.png" alt="">
-        </div>
-
-        <div class="StarFour">
-            <img src="images/Star.png" alt="">
-        </div>
-
-        <div class="StarReflectionOne">
-            <img src="images/StarReflection.png" alt="">
-        </div>
-
-        <div class="StarReflectionTwo">
-            <img src="images/StarReflection.png" alt="">
-        </div>
-
-        <div class="TextLines">
-            <div class="TextLine1">Twinkle, twinkle, little star,
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="StarOne">
+                <img src="images/Star.png" alt="">
             </div>
-            <div class="TextLine2">How I wonder what you are!
+
+            <div class="StarTwo">
+                <img src="images/Star.png" alt="">
             </div>
-            <div class="TextLine3">Up above the world so high,</div>
-            <div class="TextLine4">Like a diamond in the sky!</div>
-            <div class="TextLine5">Twinkle twinkle little star,</div>
-            <div class="TextLine6">Oh how I wonder what you are,</div>
-            <div class="TextLine7">When the blazing sun is gone,</div>
-            <div class="TextLine8">When the nothing shines upon,</div>
-            <div class="TextLine9">Then you show your little light,</div>
-            <div class="TextLine10">Twinkle, twinkle, all the night.</div>
-            <div class="TextLine11">Twinkle twinkle little star,</div>
-            <div class="TextLine12">Show me light from afar,</div>
-            <div class="TextLine13">Then the traveler in the dark,</div>
-            <div class="TextLine14">Thanks you for your little spark,</div>
-            <div class="TextLine15">He could not see which way to go,</div>
-            <div class="TextLine16">If you did not twinkle so.</div>
-            <div class="TextLine17">Twinkle twinkle little star,</div>
-            <div class="TextLine18">What a golden joy you are,</div>
-            <div class="TextLine19">When the blazing sun is gone,</div>
-            <div class="TextLine20">When the nothing shines upon,</div>
-            <div class="TextLine21">Though I know not what you are,</div>
-            <div class="TextLine22">Twinkle, twinkle, little star.</div>
-            <div class="TextLine23">Twinkle twinkle little star,</div>
-            <div class="TextLine24">Oh how I wonder</div>
-            <div class="TextLine25">what you are.</div>
+
+            <div class="StarThree">
+                <img src="images/Star.png" alt="">
+            </div>
+
+            <div class="StarFour">
+                <img src="images/Star.png" alt="">
+            </div>
+
+            <div class="StarReflectionOne">
+                <img src="images/StarReflection.png" alt="">
+            </div>
+
+            <div class="StarReflectionTwo">
+                <img src="images/StarReflection.png" alt="">
+            </div>
+
+            <div class="TextLines">
+                <div class="TextLine1">Twinkle, twinkle, little star,</div>
+                <div class="TextLine2">How I wonder what you are!</div>
+                <div class="TextLine3">Up above the world so high,</div>
+                <div class="TextLine4">Like a diamond in the sky!</div>
+                <div class="TextLine5">Twinkle twinkle little star,</div>
+                <div class="TextLine6">Oh how I wonder what you are,</div>
+                <div class="TextLine7">When the blazing sun is gone,</div>
+                <div class="TextLine8">When the nothing shines upon,</div>
+                <div class="TextLine9">Then you show your little light,</div>
+                <div class="TextLine10">Twinkle, twinkle, all the night.</div>
+                <div class="TextLine11">Twinkle twinkle little star,</div>
+                <div class="TextLine12">Show me light from afar,</div>
+                <div class="TextLine13">Then the traveler in the dark,</div>
+                <div class="TextLine14">Thanks you for your little spark,</div>
+                <div class="TextLine15">He could not see which way to go,</div>
+                <div class="TextLine16">If you did not twinkle so.</div>
+                <div class="TextLine17">Twinkle twinkle little star,</div>
+                <div class="TextLine18">What a golden joy you are,</div>
+                <div class="TextLine19">When the blazing sun is gone,</div>
+                <div class="TextLine20">When the nothing shines upon,</div>
+                <div class="TextLine21">Though I know not what you are,</div>
+                <div class="TextLine22">Twinkle, twinkle, little star.</div>
+                <div class="TextLine23">Twinkle twinkle little star,</div>
+                <div class="TextLine24">Oh how I wonder</div>
+                <div class="TextLine25">what you are.</div>
+            </div>
         </div>
-
-
-
-    </div><!-- end of container -->
-
-</body>
-
+    </body>
 </html>
